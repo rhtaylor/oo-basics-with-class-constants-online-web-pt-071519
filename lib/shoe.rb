@@ -6,7 +6,9 @@ class Shoe
     @brand = brand
       BRANDS << BRANDS.include?(@brand)? nil : @brand
   end
-
+  def brand
+    @brand 
+    BRANDS << BRANDS.include?(brand)? nil : brand
     def cobble
     self.condition = "new"
     puts "Your shoe is as good as new!"
