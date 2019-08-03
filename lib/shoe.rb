@@ -1,13 +1,14 @@
 class Shoe
   attr_accessor :color, :size, :material, :condition
-  BRAND = []
-  BRANDS = BRAND.uniq
+  BRANDS = []
+  
   def initialize(brand)
     @brand = brand
-    BRAND << @brand
+    
   end
   def brand
     @brand
+    BRANDS << BRANDS.include?(@brand)? nil : @brand 
 
   end
     def cobble
